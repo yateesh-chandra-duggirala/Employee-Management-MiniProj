@@ -1,17 +1,18 @@
 from sqlalchemy import create_engine, Column, Integer, String, Float
-# from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import Session, DeclarativeBase
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import Session
 
 URL = "postgresql+psycopg2://postgres:postgres@localhost/backend_employee"
 
 engine = create_engine(URL)
 
-class Base(DeclarativeBase):
-    pass
+Base = declarative_base()
+
+session = Session(engine)
 
 class Employee(Base):
 
-    __tablename__ = "employee"
+    __tablename__ = "employee_sample"
 
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
@@ -20,7 +21,7 @@ class Employee(Base):
     exp = Column(Integer, nullable=True)
     email = Column(String, nullable= False)
 
-session = Session(engine)
+Base.metadata.create_all(engine)
 
 obj = Employee(name = "Priya", sal = 78000.7, dept = "HR", exp = 6, email = "priyanvita@gmail.com")
 
