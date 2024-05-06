@@ -1,0 +1,119 @@
+.App {
+  text-align: center;
+}
+
+body{
+  background-color: antiquewhite;
+}
+
+p{
+  font-size: large;
+  font-weight: bold;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.table-center{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+table{
+  width: 95%;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+th{
+  background-color: #61dafb;
+}
+
+td{
+  background-color: aliceblue; 
+}
+
+th, td{
+  padding: 8px;
+}
+
+button{
+  color: white;
+  padding: 5px;
+  width: 140px;
+  height: 40px;
+  border: None;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: medium;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+}
+
+.button-container{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.button-table-container{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 0px;
+}
+
+label{
+  margin-left: 10px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin-top: 150px;
+  flex-direction: column;
+  border: 5px solid black;
+}
+
+.add-employee{
+  margin-left: 33px;
+  margin-bottom: 10px;
+  background-color: #002ab3;
+
+  &:hover{
+    background-color: rgb(70,8, 243);
+  }
+}
+
+.delete-button{
+  background-color: rgb(200, 10,10);
+  &:hover{
+    background-color: #ff0000;
+  }
+}
+
+.edit-button{
+  background-color: rgb(15, 160,1);
+  &:hover{
+    background-color: #00ff15;
+  }
+}
