@@ -117,3 +117,24 @@ label{
     background-color: #00ff15;
   }
 }
+
+.input-field{
+  max-width: 90%;
+  padding: 8px;
+}
+
+.form-group{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.error{
+  text-align: right;
+  color: #ff0000;
+  margin-top: 35px;
+  font-size: 11px;
+  position: absolute;
+  font-weight: bold;
+  margin-left: 475px;
+}

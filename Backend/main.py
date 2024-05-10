@@ -4,6 +4,7 @@
 # Install the above libraries : pip install fastapi
 
 from fastapi import FastAPI, Depends, HTTPException
+from fastapi.middleware.cors import CORSMiddleware                         
 from typing import Annotated
 from pydantic import BaseModel
 import model
@@ -83,3 +84,12 @@ def delete_employee(emp_id : int, db: db_dependency):
     db.delete(result)
     db.commit()
     return "Deleted Successfully"
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = ["http://localhost:3000"],
+    allow_credentials = True,
+    allow_methods = ["*"],
+    allow_headers = ["*"],
+)
